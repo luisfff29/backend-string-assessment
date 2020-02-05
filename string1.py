@@ -24,15 +24,18 @@
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-    """Your code goes here.  Edit this docstring."""
-    return
-
+    if count >= 10:
+        return "Number of donuts: many"
+    else:
+        return "Number of donuts: " + str(count)
 
 # B. both_ends
 # Given a string s, return a string made of the first 2
 # and the last 2 chars of the original string,
 # so 'spring' yields 'spng'. However, if the string length
 # is less than 2, return instead the empty string.
+
+
 def both_ends(s):
     """Your code goes here.  Edit this docstring."""
     return
@@ -73,7 +76,7 @@ def test(got, expected):
     else:
         prefix = '  X '
     print('{} got: {} expected: {}'.format(prefix, repr(got), repr(expected)))
-    
+
 
 # Provided main() calls the above functions with interesting inputs,
 # using test() to check if each result is correct or not.
