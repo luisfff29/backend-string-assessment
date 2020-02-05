@@ -29,6 +29,7 @@ def donuts(count):
     else:
         return "Number of donuts: " + str(count)
 
+
 # B. both_ends
 # Given a string s, return a string made of the first 2
 # and the last 2 chars of the original string,
@@ -37,8 +38,11 @@ def donuts(count):
 
 
 def both_ends(s):
-    """Your code goes here.  Edit this docstring."""
-    return
+    if len(s) < 2:
+        return ""
+    else:
+        str = s[:2] + s[-2:]
+        return str
 
 
 # C. fix_start
