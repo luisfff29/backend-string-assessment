@@ -55,8 +55,13 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-    """Your code goes here.  Edit this docstring."""
-    return
+    for i in s[1:]:
+        if s[0] == i:
+            str = s.replace(i, "*")
+    if s[0] in s[1:]:
+        return s[0] + str[1:]
+    else:
+        return s
 
 
 # D. MixUp
