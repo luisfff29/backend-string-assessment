@@ -53,7 +53,10 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
     def half(x):
-        return int(round(float(len(x))/2))
+        if len(x) % 2 == 0:
+            return int(len(x)/2)
+        else:
+            return int((len(x) - 1)/2 + 1)
     return a[:half(a)] + b[:half(b)] + a[half(a):] + b[half(b):]
 
 
